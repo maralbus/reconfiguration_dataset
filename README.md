@@ -1,11 +1,11 @@
 # Reconfiguration Dataset
 
-## Fileformat ALB
+## Fileformat
 
-The reconfiguration dataset is extended from the description of the ".ALB" file format ".ALB" by Armin Scholl, Christian Becker (FSU Jena) and Nils Boysen, Malte Fliedner (University of Hamburg).
-It extends the data by adding `<investment costs>, <task types>, <line depot>, <processing costs>` and `<saving costs>` for the reconfiguration.
+The reconfiguration dataset is extended from the description of the ".ALB" file format ".ALB" by Armin Scholl, Christian Becker (FSU Jena), Nils Boysen, and Malte Fliedner (University of Hamburg).
+It extends the data by adding `<investment costs>, <task types>, <line depot>, <processing costs>`, and `<saving costs>` for the reconfiguration.
 
-Each block of information is preceded by a `<keyword>`-tag, tags and descriptions are listed below:
+Each block of information is preceded by a `<keyword>`-tag. Tags and descriptions are listed below:
 
 | Tag                      | Description                                                                                                                                   |
 | :----------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,4 +21,32 @@ Each block of information is preceded by a `<keyword>`-tag, tags and description
 | `<saving costs>`         | Saving costs per equipment `j`, e.g. `E1, 1000$`.                                                                                             |
 | `<end>`                  | End of file tag.                                                                                                                              |
 
-For further information we refer to: 
+The data is structured based on the equipment alternatives `r={5, 10, 15, 20}` and named `instance_n=20_${instance number}_r=${equipment}.alb`.
+
+For further information, we refer to the paper [Resource reconfiguration and optimization in brownfield constrained Robotic Assembly Line Balancing Problems](https://www.sciencedirect.com/science/article/pii/S0278612523000018).
+
+
+## License
+
+This work is licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
+
+```yaml
+SPDX-License-Identifier: CC-BY-4.0
+```
+
+## Reference
+
+```bibtex
+@article{ALBUS2023132,
+    title = {Resource reconfiguration and optimization in brownfield constrained Robotic Assembly Line Balancing Problems},
+    journal = {Journal of Manufacturing Systems},
+    volume = {67},
+    pages = {132-142},
+    year = {2023},
+    issn = {0278-6125},
+    doi = {https://doi.org/10.1016/j.jmsy.2023.01.001},
+    url = {https://www.sciencedirect.com/science/article/pii/S0278612523000018},
+    author = {Marcel Albus and Marco F. Huber},
+    keywords = {Reconfiguration, Assembly line balancing, Production},
+}
+```
